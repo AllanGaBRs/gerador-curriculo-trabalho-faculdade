@@ -1,1 +1,5 @@
-
+.div_name{
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
