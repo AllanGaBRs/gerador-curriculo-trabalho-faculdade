@@ -21,9 +21,36 @@
             <input type="date" class="input_data" id="data-nascimento" required>
         </div>
 
-        <div class="div_endereco">
+        
+
+        <div>
             <label for="endereco" class="label_endereco">Endereço:</label>
             <input type="text" class="input_endereco" id="endereco" placeholder="Digite aqui" required>
+        </div>
+        
+
+        <div class="div_loc">
+            <div class="div_city">
+                <label for="city" class="label_city">Cidade:</label>
+                <input type="text" class="input_city" id="city" placeholder="Digite aqui" required>
+            </div>
+
+            <div class="div_country">
+                <label for="country" class="label_country">Estado:</label>
+                <input type="text" class="input_country" id="country" placeholder="Digite aqui">
+            </div>
+        </div>
+
+        <div class="div_telefone">
+            <label for="telefone" class="label_telefone">Telefone:</label>
+            <input type="tel" class="input_telefone" id="telefone" pattern="[0-9]{2}[0-9]{5}[0-9]{4}" placeholder="(12) 34567-8900" required>
+        </div>
+
+        <div class="div_experiencia">
+            <label for="experiencia" class="label_experiencia">Experiência Profissional:</label>
+            <input type="text" name="input_experiencia" id="experiencia" placeholder="Digite Aqui">
+            <button type="button" class="button" onclick="adicionarReferencia()">Adicionar</button>
+            <button type="button" class="button" onclick="removerReferencia()">Remover</button>
         </div>
 
         <div class="div_referencias">
