@@ -59,3 +59,63 @@ input[type="text"], input[type="date"], input[type="tel"] {
     flex: 1;
 }
 
+/* Botões */
+button, .submit-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-right: 10px;
+}
+
+.adicionar {
+    background-color: #28a745;
+    color: white;
+}
+
+.adicionar:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.remover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.remover:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Contêiner de referências */
+#referencias-container {
+    margin-top: 10px;
+}
+
+#referencias-container input {
+    margin-bottom: 10px;
+}
+
+/* Contêiner de experiências pessoais */
+#experiencias-container {
+    margin-top: 10px;
+}
+
+#experiencias-container input {
+    margin-bottom: 10px;
+}
