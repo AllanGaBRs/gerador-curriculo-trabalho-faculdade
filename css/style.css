@@ -1,121 +1,95 @@
-/* Estilo global */
+/* Centralizar o conteúdo na página e alinhar ao centro */
 html, body {
-    height: 100%;
-    margin: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Fundo suave */
 }
 
-/* Container principal */
-.container {
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-/* Título */
-.titulo {
+/* Centralizar o título no topo da página */
+.div_titulo {
     font-size: 28px;
     color: #333;
-    margin-bottom: 20px;
+    margin: 20px 0; /* Espaço em torno do título */
     text-align: center;
-    margin: 40px 0 20px 0; 
+    width: 100%; /* Garante que o título ocupe a largura total */
+    max-width: 600px; /* Limita a largura máxima do título */
 }
 
-/* Campos de formulário */
-.campo {
-    margin-bottom: 15px;
+/* Contêiner principal com alinhamento ao centro e espaçamento */
+.container {
+    width: 600px;
+    max-width: 600px; /* Largura máxima do contêiner principal */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
+    border-radius: 8px;
+    background-color: #fff; /* Fundo branco para o contêiner */
 }
 
+/* Estilo dos labels */
 label {
     display: block;
-    margin-bottom: 5px;
-    font-size: 16px;
-    color: #555;
+    margin-bottom: 8px;
+    font-size: 18px;
 }
 
-input[type="text"], input[type="date"], input[type="tel"] {
+/* Estilo dos campos de entrada */
+input[type="text"], input[type="date"], input[type="email"], textarea {
     width: 100%;
-    padding: 10px;
+    max-width: 100%; /* Garante que o campo de entrada não exceda a largura do contêiner */
+    padding: 12px;
+    margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
-    box-sizing: border-box;
+    /*box-sizing: border-box; /* Inclui o padding e a borda na largura total */
 }
 
-/* Layout de localização */
-.campo-loc {
-    display: flex;
-    gap: 10px;
-}
-
-.campo-loc .campo {
-    flex: 1;
-}
-
-/* Botões */
-button, .submit-button {
-    padding: 10px 15px;
-    border: none;
+.input_telefone{
+    width: 100%;
+    max-width: 100%; 
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Estilo dos botões */
+button, input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    margin-right: 10px;
 }
 
-.adicionar {
+/* Botão de adicionar referência */
+button.button {
     background-color: #28a745;
-    color: white;
 }
 
-.adicionar:hover {
+button.button:hover {
     background-color: #218838;
     transform: scale(1.05);
 }
 
-.remover {
+/* Botão de remover referência */
+button.button:nth-of-type(2) {
     background-color: #dc3545;
-    color: white;
 }
 
-.remover:hover {
+button.button:nth-of-type(2):hover {
     background-color: #c82333;
     transform: scale(1.05);
 }
 
-.submit-button {
-    background-color: #007bff;
-    color: white;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.submit-button:hover {
+/* Botão de envio */
+input[type="submit"]:hover {
     background-color: #0056b3;
     transform: scale(1.05);
-}
-
-/* Contêiner de referências */
-#referencias-container {
-    margin-top: 10px;
-}
-
-#referencias-container input {
-    margin-bottom: 10px;
-}
-
-/* Contêiner de experiências pessoais */
-#experiencias-container {
-    margin-top: 10px;
-}
-
-#experiencias-container input {
-    margin-bottom: 10px;
 }

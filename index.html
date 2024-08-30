@@ -1,72 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Gerador de Currículos</title>
 </head>
+
 <body>
-<div class="container">
-    <form action="">
-        <h1 class="div_titulo">Gerador de currículos</h1>
+    <div class="container">
+        <form action="php/back.php" method="POST" target="_blank">
+            <h1 class="div_titulo">Gerador de currículos</h1>
 
-        <div class="main_nome">
-            <label for="nome" class="label_nome">Nome:</label>
-            <input type="text" class="input_name" id="nome" placeholder="Digite aqui" required>
-        </div>
-
-        <div class="data_nasc">
-            <label for="data-nascimento" class="label_data-nascimento">Data de nascimento:</label>
-            <input type="date" class="input_data" id="data-nascimento" required>
-        </div>
-
-        
-
-        <div>
-            <label for="endereco" class="label_endereco">Endereço:</label>
-            <input type="text" class="input_endereco" id="endereco" placeholder="Digite aqui" required>
-        </div>
-        
-
-        <div class="div_loc">
-            <div class="div_city">
-                <label for="city" class="label_city">Cidade:</label>
-                <input type="text" class="input_city" id="city" placeholder="Digite aqui" required>
+            <div class="main_nome">
+                <label for="nome" class="label_nome">Nome:</label>
+                <input type="text" class="input_name" id="nome" placeholder="Digite aqui" required>
+            </div>
+            
+            <div class="data_nasc">
+                <label for="data-nascimento" class="label_data-nascimento">Data de nascimento:</label>
+                <input type="date" class="input_data" id="data-nascimento" required>
+            </div> 
+            
+            <div class="div_loc">
+                <div class="div_estado">
+                    <label for="estado" class="label_estado">Estado:</label>
+                    <input type="text" class="input_estado" id="estado" placeholder="Digite aqui">
+                </div>
+                
+                <div class="div_city">
+                    <label for="city" class="label_city">Cidade:</label>
+                    <input type="text" class="input_city" id="city" placeholder="Digite aqui" required>
+                </div>
+                
+            </div>
+            <div>
+                <label for="endereco" class="label_endereco">Endereço:</label>
+                <input type="text" class="input_endereco" id="endereco" placeholder="Digite aqui" required>
             </div>
 
-            <div class="div_country">
-                <label for="country" class="label_country">Estado:</label>
-                <input type="text" class="input_country" id="country" placeholder="Digite aqui">
+            <div class="div_telefone">
+                <label for="telefone" class="label_telefone">Telefone:</label>
+                <input type="tel" class="input_telefone" id="telefone" pattern="[0-9]{2}[0-9]{5}[0-9]{4}"
+                    placeholder="(99) 99999-9999" required>
             </div>
-        </div>
 
-        <div class="div_telefone">
-            <label for="telefone" class="label_telefone">Telefone:</label>
-            <input type="tel" class="input_telefone" id="telefone" pattern="[0-9]{2}[0-9]{5}[0-9]{4}" placeholder="(12) 34567-8900" required>
-        </div>
-
-        <div class="div_experiencia">
-            <label for="experiencia" class="label_experiencia">Experiência Profissional:</label>
-            <input type="text" name="input_experiencia" id="experiencia" placeholder="Digite Aqui">
-            <button type="button" class="button" onclick="adicionarReferencia()">Adicionar</button>
-            <button type="button" class="button" onclick="removerReferencia()">Remover</button>
-        </div>
-
-        <div class="div_referencias">
-            <label class="label_referencia">Referências:</label>
-            <div id="referencias-container" class="referencias-container">
-                <input type="text" class="input_referencia" id="referencia1" placeholder="Digite aqui" required></input>
+            <div class="div_email">
+                <label for="email" class="label_email">email:</label>
+                <input type="email" class="input_email" id="email" placeholder="Digite aqui" required>
             </div>
-            <button type="button" class="button" onclick="adicionarReferencia()">Adicionar Referência</button>
-            <button type="button" class="button" onclick="removerReferencia()">Remover Referência</button>
-        </div>
-        <br>        
-        <input type="submit" value="Pronto">
-    </form>
-</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="js/script.js"></script>
+
+            <div class="div_formacao">
+                <label class="label_formacao">Formação acadêmica</label>
+                <div id="formacao-container" class="formacao-container">
+                    <input type="text" class="input_formacao" id="referencia1" placeholder="Digite aqui"
+                        required></input>
+                </div>
+                <button type="button" class="button" onclick="adicionarFormacao()">Adicionar</button>
+                <button type="button" class="button" onclick="removerFormacao()">Remover</button>
+
+            </div>
+            <div class="div_experiencia">
+                <label for="experiencia" class="label_experiencia">Experiência Profissional:</label>
+                <div id="experiencia_container" class="experiencia_container">
+                    </divid>
+                    <input type="text" name="input_experiencia" id="experiencia" placeholder="Digite Aqui">
+                </div>
+                <button type="button" class="button" onclick="adicionarExperiencia()">Adicionar</button>
+                <button type="button" class="button" onclick="removerExperiencia()">Remover</button>
+            </div>
+            <br>
+            <input type="submit" value="Pronto">
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
