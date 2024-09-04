@@ -15,62 +15,70 @@
 
             <div class="main_nome">
                 <label for="nome" class="label_nome">Nome:</label>
-                <input type="text" class="input_name" id="nome" placeholder="Digite aqui" required>
+                <input type="text" class="input_name" id="nome" name="nome" placeholder="Digite aqui" required>
             </div>
             
+
             <div class="data_nasc">
                 <label for="data-nascimento" class="label_data-nascimento">Data de nascimento:</label>
-                <input type="date" class="input_data" id="data-nascimento" required>
-            </div> 
+                <input type="date" class="input_data" id="data-nascimento" name="data-nascimento" onblur="calcularIdade()" required>
+            </div>
+            
+            
+            <div class="idade">
+                <label for="idade" class="label_idade">Idade:</label>
+                <input type="text" class="input_idade" id="idade" name="idade" readonly>
+            </div>
+            
             
             <div class="div_loc">
                 <div class="div_estado">
                     <label for="estado" class="label_estado">Estado:</label>
-                    <input type="text" class="input_estado" id="estado" placeholder="Digite aqui">
+                    <input type="text" class="input_estado" id="estado" name="estado" placeholder="Digite aqui">
                 </div>
                 
                 <div class="div_city">
                     <label for="city" class="label_city">Cidade:</label>
-                    <input type="text" class="input_city" id="city" placeholder="Digite aqui" required>
+                    <input type="text" class="input_city" id="city" name="city" placeholder="Digite aqui" required>
                 </div>
-                
             </div>
+            
             <div>
                 <label for="endereco" class="label_endereco">Endereço:</label>
-                <input type="text" class="input_endereco" id="endereco" placeholder="Digite aqui" required>
+                <input type="text" class="input_endereco" id="endereco" name="endereco" placeholder="Digite aqui" required>
             </div>
 
             <div class="div_telefone">
                 <label for="telefone" class="label_telefone">Telefone:</label>
-                <input type="tel" class="input_telefone" id="telefone" pattern="[0-9]{2}[0-9]{5}[0-9]{4}"
+                <input type="tel" class="input_telefone" id="telefone" name="telefone" pattern="[0-9]{2}[0-9]{5}[0-9]{4}"
                     placeholder="(99) 99999-9999" required>
             </div>
 
             <div class="div_email">
-                <label for="email" class="label_email">email:</label>
-                <input type="email" class="input_email" id="email" placeholder="Digite aqui" required>
+                <label for="email" class="label_email">Email:</label>
+                <input type="email" class="input_email" id="email" name="email" placeholder="Digite aqui" required>
             </div>
-
 
             <div class="div_formacao">
                 <label class="label_formacao">Formação acadêmica</label>
                 <div id="formacao-container" class="formacao-container">
-                    <input type="text" class="input_formacao" id="referencia1" placeholder="Digite aqui"
-                        required></input>
+                    <input type="text" class="input_formacao" id="formacao1" name="formacao[]" placeholder="Digite aqui" required>
                 </div>
                 <button type="button" class="button" onclick="adicionarFormacao()">Adicionar</button>
                 <button type="button" class="button" onclick="removerFormacao()">Remover</button>
-
             </div>
+
             <div class="div_experiencia">
                 <label for="experiencia" class="label_experiencia">Experiência Profissional:</label>
                 <div id="experiencia_container" class="experiencia_container">
-                    </divid>
-                    <input type="text" name="input_experiencia" id="experiencia" placeholder="Digite Aqui">
+                    <input type="text" name="experiencia[]" id="experiencia" placeholder="Digite Aqui">
                 </div>
+             </div>
                 <button type="button" class="button" onclick="adicionarExperiencia()">Adicionar</button>
                 <button type="button" class="button" onclick="removerExperiencia()">Remover</button>
+                </div>
             </div>
+
             <br>
             <input type="submit" value="Pronto">
         </form>
