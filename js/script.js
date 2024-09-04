@@ -6,7 +6,7 @@ function calcularIdade() {
         var dataNasc = new Date(dataNascimento);
         var hoje = new Date();
 
-        // Calculando 
+        // calculo da idade 
         var idade = hoje.getFullYear() - dataNasc.getFullYear();
         var mes = hoje.getMonth() - dataNasc.getMonth();
 
@@ -15,68 +15,46 @@ function calcularIdade() {
             idade--;
         }
 
-        // Exibindo
+        
         document.getElementById("idade").value = idade;
     }
 }
-let referenciaCount = 1;
 
+// Adicionar Formação
 function adicionarFormacao() {
-    referenciaCount++;
-    const container = document.getElementById("formacao-container");
-    
-    // Cria o novo input
-    const newInput = document.createElement("input");
-    newInput.type = "text";
-    newInput.className = "input_referencia";
-    newInput.id = `referencia${referenciaCount}`;
-    newInput.placeholder = "Digite aqui";
-    
-    container.appendChild(newInput);
-    
-    newInput.focus();
+    var container = $('#formacao-container');
+    var inputCount = container.find('input').length + 1;
+    var newInput = $('<input>')
+        .attr('type', 'text')
+        .attr('name', 'formacao[]')
+        .attr('placeholder', 'Digite aqui')
+        .addClass('input_formacao');
+    container.append(newInput);
 }
 
-
+// Remover Formação
 function removerFormacao() {
-    if (referenciaCount > 1) { // Permite a remoção até o segundo campo
-        const container = document.getElementById("formacao-container");
-        const lastInput = container.querySelector('input:last-of-type'); // Seleciona o último input
-        container.removeChild(lastInput);
-        referenciaCount--;
-    } else {
-        alert("Não é possível remover todas as referências.");
+    var container = $('#formacao-container');
+    if (container.find('input').length > 1) {
+        container.find('input').last().remove();
     }
 }
 
-// mema coisa da função de cima, adicionar mais um campo para digitar so que agora em experiencia proficional
-let experienciaCount = 1;
-
+// Adicionar Experiência
 function adicionarExperiencia() {
-    experienciaCount++;
-    const container = document.getElementById("experiencia_container");
-    
-    // Cria o novo input
-    const newInput = document.createElement("input");
-    newInput.type = "text";
-    newInput.className = "input_experiencia";
-    newInput.id = `experiencia${experienciaCount}`;
-    newInput.placeholder = "Digite aqui";
-    newInput.required = true;
-    
-    container.appendChild(newInput);
-    
-    newInput.focus();
+    var container = $('#experiencia_container');
+    var inputCount = container.find('input').length + 1;
+    var newInput = $('<input>')
+        .attr('type', 'text')
+        .attr('name', 'experiencia[]')
+        .attr('placeholder', 'Digite Aqui');
+    container.append(newInput);
 }
 
+// Remover Experiência
 function removerExperiencia() {
-    if (experienciaCount > 1) { // Permite a remoção até o segundo campo
-        const container = document.getElementById("experiencia_container");
-        const lastInput = container.querySelector('input:last-of-type'); // Seleciona o último input
-        container.removeChild(lastInput);
-        experienciaCount--;
-    } else {
-        alert("Não é possível remover todas as experiências.");
+    var container = $('#experiencia_container');
+    if (container.find('input').length > 1) {
+        container.find('input').last().remove();
     }
 }
-
