@@ -2,8 +2,8 @@
 html, body {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza os itens horizontalmente */
-    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; 
+    justify-content: center; 
     font-family: Arial, sans-serif;
 }
 
@@ -11,20 +11,20 @@ html, body {
 .div_titulo {
     font-size: 28px;
     color: #333;
-    margin: 20px 0; /* Espaço em torno do título */
+    margin: 20px 0; 
     text-align: center;
-    width: 100%; /* Garante que o título ocupe a largura total */
-    max-width: 600px; /* Limita a largura máxima do título */
+    width: 100%; 
+    max-width: 600px; 
 }
 
-/* Contêiner principal com alinhamento ao centro e espaçamento */
+/* Container principal com alinhamento ao centro e espaçamento */
 .container {
-    width: 600px;
-    max-width: 600px; /* Largura máxima do contêiner principal */
+    width: 650px;
+    max-width: 650px; 
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     border-radius: 8px;
-    background-color: #fff; /* Fundo branco para o contêiner */
+    background-color: #fff;
 }
 
 /* Estilo dos labels */
@@ -36,19 +36,19 @@ label {
 
 /* Estilo dos campos de entrada */
 input[type="text"], input[type="date"], input[type="email"], textarea {
-    width: 100%;
-    max-width: 100%; /* Garante que o campo de entrada não exceda a largura do contêiner */
+    width: 600px;
+    max-width: 600px; 
     padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
-    /*box-sizing: border-box; /* Inclui o padding e a borda na largura total */
+   
 }
 
 .input_telefone{
-    width: 100%;
-    max-width: 100%; 
+    width: 600px;
+    max-width: 600px; 
     padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
@@ -70,21 +70,21 @@ button, input[type="submit"] {
 
 /* Botão de adicionar referência */
 button.button {
-    background-color: #28a745;
+    background-color: #880ce7;
 }
 
 button.button:hover {
-    background-color: #218838;
+    background-color: #880ce7;
     transform: scale(1.05);
 }
 
 /* Botão de remover referência */
 button.button:nth-of-type(2) {
-    background-color: #dc3545;
+    background-color: #534f4f;
 }
 
 button.button:nth-of-type(2):hover {
-    background-color: #c82333;
+    background-color: #534f4f;
     transform: scale(1.05);
 }
 
